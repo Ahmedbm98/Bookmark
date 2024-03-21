@@ -16,6 +16,8 @@ Experience the Tabs Project in action! Click the link below to access the live d
   4- Delete function Delete a bookmark
   
   5- The Undo Deleted Return Bookmark function has been deleted
+
+  6- Visit Function Visit a bookmark website  
   
 ## Technologies
 HTML, CSS, Bootstrap, Font Awesome, JavaScript

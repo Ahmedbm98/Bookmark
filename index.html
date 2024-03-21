@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark</title>
+    <!-- Bootstrap Css File -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto+Slab:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- Start Bookmark Section -->
+    <section>
+      <div class="container mt-5">
+        <h1 class="text-center fw-bold text-capitalize">Bookmarker</h1>
+        <main class="body-bookmark p-4 my-5">
+          <h2 class="text-center">
+            <i class="fa-solid fa-bookmark"></i>
+            Bookmark your favorite sites
+            <i class="fa-solid fa-bookmark"></i>
+          </h2>
+          <div class="mb-4">
+            <label for="SiteName" class="fw-bold fs-6 text-capitalize mb-1">
+              <i class="fa-solid fa-book me-1"></i>Site Name
+            </label>
+            <input
+              oninput="isValidation(siteNameRegex, this)"
+              class="form-control border-2 shadow-none"
+              type="text"
+              name="SiteName"
+              id="SiteName"
+              placeholder="Bookmark Name"
+            />
+          </div>
+          <div class="mb-4">
+            <label for="SiteUrl" class="fw-bold fs-6 text-capitalize mb-1">
+              <i class="fa-solid fa-link me-1"></i>Site URL
+            </label>
+            <input
+              oninput="isValidation(UrlRegex, this)"
+              class="form-control border-2 shadow-none"
+              type="url"
+              name="SiteUrl"
+              id="SiteUrl"
+              placeholder="Website URL"
+            />
+          </div>
+          <div class="w-50 text-center mx-auto">
+            <button class="d-block mx-auto btn text-light text-capitalize">
+              submit
+            </button>
+            <button
+              onclick="undoDelete()"
+              id="btnDeleteUndo"
+              class="d-none mx-auto btn text-light text-capitalize"
+            >
+              Undo deleted
+            </button>
+          </div>
+        </main>
+        <div class="output mt-4">
+          <table class="table table table-striped text-center">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Website Name</th>
+                <th scope="col">Visit</th>
+                <th scope="col">Delete</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    <!-- End Bookmark Section -->
+
+    <!-- Start Modal -->
+    <div
+      class="modal fade"
+      id="myModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div id="two"></div>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <h1 class="fs-4 fw-bold">
+              Site Name or Url is not valid, Please follow the rules below :
+            </h1>
+            <div class="pt-3 fs-5">
+              <p>
+                <i class="fa-regular fa-circle-right"></i> Site name must
+                contain at least 3 characters
+              </p>
+              <p>
+                <i class="fa-regular fa-circle-right"></i> Site URL must be a
+                valid one
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Modal -->
+
+    <!-- Bootstrap Js File -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!-- Main Js File -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>

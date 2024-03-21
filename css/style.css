@@ -1,0 +1,102 @@
+body {
+   background-color: #F7ECDE;
+
+}
+
+section .container h1 {
+   position: relative;
+   font-family: "Pacifico", cursive;
+}
+
+section .container h1::after {
+   content: "";
+   background-color: #FEC260;
+   width: 210px;
+   position: absolute;
+   bottom: 0;
+   left: 50%;
+   top: 70%;
+   transform: translateX(-50%);
+   z-index: -1;
+   transition: .5s ease;
+   border-radius: 5px;
+}
+
+section .container h1:hover::after {
+   top: 20%;
+}
+
+.body-bookmark {
+   border-width: 2px 0;
+   border-color: #111;
+   border-style: dotted;
+}
+
+section .container .body-bookmark h2 {
+   font-family: "Righteous", sans-serif;
+
+}
+
+section .container .body-bookmark h2 i:first-child {
+   color: #3FA55B;
+}
+
+section .container .body-bookmark h2 i:last-child {
+   color: #B2AC49;
+}
+
+section .container .body-bookmark input:not(:focus) {
+   border: none;
+}
+
+section .container .body-bookmark button {
+   background-color: #BB4120;
+}
+
+section .container .body-bookmark button:hover {
+   background-color: #8a321a;
+}
+
+section .output tbody td .first {
+   background-color: #8A9E23;
+}
+
+section .output tbody td .last {
+   background-color: #D30820;
+}
+
+.modal-header {
+   border-bottom: none;
+}
+
+.modal-header #two {
+   position: relative;
+   width: 25px;
+   height: 25px;
+   border-radius: 50%;
+   background-color: #F15F5D;
+}
+
+.modal-header #two::before {
+   content: "";
+   position: absolute;
+   left: 30px;
+   width: 25px;
+   height: 25px;
+   border-radius: 50%;
+   background-color: #FEBE2E;
+}
+
+.modal-header #two::after {
+   content: "";
+   position: absolute;
+   left: 60px;
+   width: 25px;
+   height: 25px;
+   border-radius: 50%;
+   background-color: #3FA55B;
+}
+
+.modal-body p i {
+   color: #BB4120;
+}

@@ -8,9 +8,13 @@ Experience the Tabs Project in action! Click the link below to access the live d
 
 # Featuers
   1- Validation in Input Name
+  
   2- Validation Url Site in Input
+  
   3- Adding your bookmark in table
+  
   4- Delete function Delete a bookmark
+  
   5- The Undo Deleted Return Bookmark function has been deleted
   
 ## Technologies
